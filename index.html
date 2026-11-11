@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pallavi Sinha | Technical Project &amp; Program Delivery</title>
+
+<meta name="description" content="Pallavi Sinha is a PMP-certified technology delivery leader with 16+ years of experience across eCommerce, insurance, digital platforms and AI-enabled transformation.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: sticky-free single column. Split hero (pitch + delivery footprint card), proof strip,
+   three "why a technical PM" cards, five case studies (one featured), career path timeline,
+   skills and credentials, contact band. Signature idea: the developer-to-PM career path. */
+:root {
+  --bg: #f4f6f6;
+  --surface: #ffffff;
+  --ink: #12222b;
+  --muted: #566772;
+  --line: #dde3e4;
+  --accent: #0a6a6e;
+  --accent-ink: #ffffff;
+  --soft: #e3f1f1;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1a20; --surface: #15252d; --ink: #ebf1f2; --muted: #98aab3; --line: #25383f;
+    --accent: #55d0c8; --accent-ink: #062321; --soft: #123136; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1a20; --surface: #15252d; --ink: #ebf1f2; --muted: #98aab3; --line: #25383f;
+  --accent: #55d0c8; --accent-ink: #062321; --soft: #123136; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; margin: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+p { margin: 0; }
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; }
+nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; flex-wrap: wrap; }
+.logo { font-family: var(--font-display); font-weight: 700; font-size: 19px; text-decoration: none; }
+nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+nav a { text-decoration: none; }
+nav a:hover { color: var(--ink); }
+.btn { display: inline-block; background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: 15px; padding: 12px 20px; border-radius: 8px; text-decoration: none; border: 1px solid var(--accent); cursor: pointer; font-family: inherit; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 40px; align-items: center; padding-block: 52px 36px; }
+.eyebrow { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 600; margin-bottom: 14px; }
+.hero h1 { font-size: clamp(32px, 5.2vw, 54px); margin-bottom: 18px; }
+.hero .lead { color: var(--muted); font-size: 18px; max-width: 54ch; margin-bottom: 26px; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.foot { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: grid; gap: 14px; }
+.foot h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-family: var(--font-body); font-weight: 600; }
+.foot dl { margin: 0; display: grid; gap: 12px; }
+.foot dt { font-size: 13px; color: var(--muted); }
+.foot dd { margin: 0; font-weight: 500; }
+.proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); border: 1px solid var(--line); border-radius: 14px; background: var(--surface); margin-block: 8px 12px; overflow: hidden; }
+.proof div { padding: 18px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 0 -1px -1px 0; }
+.proof strong { display: block; font-family: var(--font-display); font-size: 30px; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.proof span { font-size: 14px; color: var(--muted); }
+section { padding-block: 46px; border-top: 1px solid var(--line); margin-top: 28px; }
+section > h2, .about h2 { font-size: 28px; margin-bottom: 8px; }
+.about { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 36px; align-items: center; }
+.about p + p { margin-top: 12px; }
+.about p { color: var(--muted); max-width: 62ch; }
+.photo { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); display: block; max-width: 100%; }
+section > .sub { color: var(--muted); margin-bottom: 26px; max-width: 62ch; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; min-width: 0; }
+.card h3 { font-size: 18px; margin-bottom: 8px; }
+.card p { color: var(--muted); font-size: 15px; }
+.cases { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); }
+.case { display: grid; gap: 14px; align-content: start; }
+.case.feat { grid-column: 1 / -1; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 10px; font-size: 13px; color: var(--muted); }
+.tag { display: inline-block; font-size: 12px; font-weight: 600; background: var(--soft); color: var(--accent); border-radius: 999px; padding: 3px 10px; }
+.case h3 { font-size: 21px; }
+.rows { display: grid; gap: 12px; font-size: 15px; }
+.feat .rows { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.rows b { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; margin-bottom: 2px; }
+.outcome { border-left: 3px solid var(--accent); padding: 4px 0 4px 12px; font-weight: 600; }
+.path { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.path li { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.path li:first-child { border-top: 1px solid var(--line); }
+.path .yrs { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 14px; padding-top: 2px; }
+.path h3 { font-size: 17px; margin-bottom: 2px; }
+.path p { color: var(--muted); font-size: 15px; }
+.path li.now h3::after { content: "Current"; margin-left: 10px; font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: var(--soft); padding: 2px 8px; border-radius: 999px; vertical-align: middle; }
+.skills { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.skills h3 { font-size: 15px; margin-bottom: 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1px solid var(--line); background: var(--bg); border-radius: 8px; padding: 6px 10px; font-size: 14px; }
+.creds { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; font-size: 15px; }
+.creds li::before { content: "✓"; color: var(--accent); font-weight: 700; margin-right: 8px; }
+.contact { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 28px; }
+.contact h2 { font-size: 26px; margin-bottom: 6px; }
+.contact p { color: var(--muted); }
+.mail { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mail code { font-family: ui-monospace, Menlo, monospace; font-size: 14px; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; overflow-wrap: anywhere; }
+footer { color: var(--muted); font-size: 13px; padding-block: 28px 40px; text-align: center; }
+@media (max-width: 860px) { .cases, .skills { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: minmax(0, 1fr); padding-block: 34px 24px; }
+  .about { grid-template-columns: minmax(0, 1fr); }
+  .photo { max-width: 260px; }
+  .path li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  nav ul { gap: 14px; }
+}
+@media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s; } .btn:hover { transform: translateY(-1px); } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#top">Pallavi Sinha</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#why">Approach</a></li>
+      <li><a href="#work">Delivery</a></li>
+      <li><a href="#path">Career path</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <p class="eyebrow">Technology Delivery Leader · PMP-Certified</p>
+      <h1>Turning complex technology initiatives into business outcomes.</h1>
+      <p class="lead">PMP-certified technology leader with 16+ years of experience spanning eCommerce, insurance, digital platforms and AI-enabled delivery. I combine hands-on technical foundations with structured project leadership to align business goals, engineering teams and execution.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.linkedin.com/in/pallavi-s-20641259/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn ghost" href="#work">Explore selected work</a>
+      </div>
+    </div>
+    <aside class="foot" aria-label="Delivery footprint">
+      <h3>Experience at a glance</h3>
+      <dl>
+        <div><dt>Business domains</dt><dd>eCommerce, Insurance, Healthcare, CRM and Gen AI</dd></div>
+        <div><dt>Technology landscape</dt><dd>Adobe Commerce, AEM, Python, Java and API-led integrations</dd></div>
+        <div><dt>Global delivery exposure</dt><dd>United States, South Korea and South Africa</dd></div>
+        <div><dt>Based in</dt><dd>Bangalore, India</dd></div>
+        <div><dt>Career interests</dt><dd>Technical Project Management, Program Delivery and Digital Transformation</dd></div>
+      </dl>
+    </aside>
+  </header>
+
+  <div class="proof" role="list">
+    <div role="listitem"><strong>16+</strong><span>years across technology and digital delivery</span></div>
+    <div role="listitem"><strong>25+</strong><span>projects delivered across multiple domains</span></div>
+    <div role="listitem"><strong>70+</strong><span>payment gateways integrated in a multi-country rollout</span></div>
+    <div role="listitem"><strong>Near real time</strong><span>AI-enabled insurance file onboarding, from a 7–10 day process</span></div>
+  </div>
+
+  <section id="about">
+    <div class="about">
+      <img class="photo" src="pallavi.jpg" alt="Portrait of Pallavi Sinha" width="320" height="400">
+      <div>
+        <h2>About</h2>
+        <p>I am a technology delivery professional based in Bengaluru, with a career that began in software development and evolved into technical project and programme leadership. Starting with PHP and Magento development, I built a strong foundation in solution delivery before moving into leading teams, projects and client engagements.</p>
+        <p>My strength lies in connecting business priorities with technology execution. I lead cross-functional teams across business analysis, AI, backend, frontend, QA, infrastructure and operations; manage scope, schedules, risks and dependencies; and keep stakeholders aligned through clear governance and transparent communication. I am comfortable working with distributed teams and global clients across the United States, South Korea and South Africa.</p>
+        <p>My experience spans eCommerce, insurance, healthcare and CRM, with a growing focus on Gen AI and process automation. I am PMP-certified and bring a blend of delivery discipline, technical understanding and client-facing leadership. I am open to opportunities in Technical Project Management, Program Management and Delivery Leadership.</p>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>How I lead technology delivery</h2>
+    <p class="sub">I bring business context, technical fluency and delivery discipline together—helping teams make informed decisions and move complex initiatives forward.</p>
+    <div class="grid">
+      <article class="card"><h3>Predictable, transparent delivery</h3><p>Lead initiatives from discovery and planning through execution, testing, release and hypercare. Keep scope, milestones, budgets, risks and dependencies visible, with practical governance and timely decisions.</p></article>
+      <article class="card"><h3>Technical fluency and sound judgement</h3><p>My development background helps me engage meaningfully with architecture and engineering teams, challenge assumptions, identify integration risks and support realistic estimation and solution decisions.</p></article>
+      <article class="card"><h3>Stakeholder and team alignment</h3><p>Build trust through focused workshops, client demonstrations, concise reporting and clear ownership. Bring business and technology stakeholders together around priorities, decisions and outcomes.</p></article>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Delivery stories</h2>
+    <p class="sub">A selection of engagements that demonstrate delivery leadership, technical breadth and measurable business or operational impact.</p>
+    <div class="cases">
+      <article class="card case feat">
+        <div class="meta"><span class="tag">Insurance · Gen AI</span><span>Project Manager</span><span>Nov 2025 – Mar 2026</span><span>Python, GPT-4.1 mini, GPT-5.2</span></div>
+        <h3>MSIG AI Header Mapper</h3>
+        <div class="rows">
+          <div><b>Challenge</b>Processing delegated bordereaux files involved manual ingestion, header mapping and configuration, typically taking 7–10 days.</div>
+          <div><b>What I did</b>Led end-to-end delivery of an AI-enabled platform for file ingestion, classification, programme matching and source-to-target mapping. Coordinated AI, backend, frontend, QA and infrastructure teams, facilitated client demos, and managed dependencies, access approvals, testing, governance and release readiness.</div>
+        </div>
+        <p class="outcome">Transformed a 7–10 day onboarding workflow into a near-real-time configuration process.</p>
+      </article>
+
+      <article class="card case">
+        <div class="meta"><span class="tag">Retail · Adobe</span><span>PM &amp; Scrum Master</span><span>Jun – Nov 2023</span></div>
+        <h3>LG multi-country rollout</h3>
+        <div class="rows">
+          <div><b>Challenge</b>A complex, multi-country commerce rollout with a compressed timeline and parallel payment-gateway and AEM workstreams.</div>
+          <div><b>What I did</b>Aligned cross-country stakeholders and delivery teams; managed status, risks, dependencies and critical-path activities to maintain execution focus.</div>
+        </div>
+        <p class="outcome">Coordinated the integration of 70+ payment gateways across multiple markets.</p>
+      </article>
+
+      <article class="card case">
+        <div class="meta"><span class="tag">Insurance</span><span>PM &amp; Scrum Master</span><span>Sep 2024 – Jan 2025</span></div>
+        <h3>Mandarin-RE process turnaround</h3>
+        <div class="rows">
+          <div><b>Challenge</b>The application team lacked consistent delivery processes, resulting in unclear priorities, misalignment and delays.</div>
+          <div><b>What I did</b>Facilitated stakeholder discussions to identify delivery gaps, then introduced a structured roadmap, standard workflows and regular feedback loops.</div>
+        </div>
+        <p class="outcome">Improved delivery alignment, team collaboration and consistency of execution.</p>
+      </article>
+
+      <article class="card case">
+        <div class="meta"><span class="tag">Commerce strategy · Adobe</span><span>PM &amp; Tech Architect</span><span>Nov 2023 – Jan 2024</span></div>
+        <h3>SM-Retail platform assessment</h3>
+        <div class="rows">
+          <div><b>Challenge</b>The retailer needed an assessment of its Adobe Commerce landscape and a roadmap to better align the platform with business goals.</div>
+          <div><b>What I did</b>Facilitated workshops with senior stakeholders, reviewed the business and technology landscape, and assessed the platform against Adobe Commerce best practices.</div>
+        </div>
+        <p class="outcome">Delivered strategic recommendations for a fit-for-purpose commerce roadmap.</p>
+      </article>
+
+      <article class="card case">
+        <div class="meta"><span class="tag">Insurance · Benefits</span><span>Project Manager</span><span>Feb 2025 – Jun 2026</span></div>
+        <h3>ABRA Benefits platform</h3>
+        <div class="rows">
+          <div><b>Challenge</b>A growing benefits platform facing client churn, manual onboarding and constrained internal capacity, alongside a mid-project change in client-facing leadership.</div>
+          <div><b>What I did</b>Led discovery and assessment across product development, client onboarding and infrastructure workflows; reviewed technical debt and operational constraints. Stepped into client coordination during a stakeholder transition and maintained focus on quality, timelines and delivery risks.</div>
+        </div>
+        <p class="outcome">Established a practical scaling roadmap prioritising onboarding automation and technical-debt reduction.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="path">
+    <h2>From developer to delivery leader</h2>
+    <p class="sub">A career built from hands-on engineering experience to leading complex, cross-functional technology delivery.</p>
+    <ol class="path">
+      <li><span class="yrs">Jun 2023 – Jun 2026</span><div><h3>Project Manager, Digitide Solutions</h3><p>Adobe Commerce, eCommerce, Insurance and Gen AI programmes for global clients.</p></div></li>
+      <li><span class="yrs">Aug 2018 – Apr 2022</span><div><h3>Module Lead, Impelsys Technologies</h3><p>Led technical delivery on Magento 2 Enterprise, including SSO and third-party API integrations for an e-learning commerce portal.</p></div></li>
+      <li><span class="yrs">Aug 2014 – Mar 2018</span><div><h3>Lead, Zensar Technologies</h3><p>Led teams delivering enterprise eCommerce for healthcare and retail clients, including onsite delivery in South Africa.</p></div></li>
+      <li><span class="yrs">Nov 2011 – Aug 2014</span><div><h3>Senior Developer, Embitel</h3><p>Magento solutions for retail and jewellery brands, with integrations, custom modules and production support.</p></div></li>
+      <li><span class="yrs">2006 – 2010</span><div><h3>Software Engineer to Team Lead</h3><p>PHP and MySQL web applications, then team lead at Banyan Tree Infomedia.</p></div></li>
+    </ol>
+  </section>
+
+  <section id="skills">
+    <h2>Skills and credentials</h2>
+    <p class="sub">A combination of delivery leadership, platform expertise and applied technology experience.</p>
+    <div class="skills">
+      <div class="card"><h3>Project and programme delivery</h3><div class="chips"><span class="chip">PMP-aligned delivery</span><span class="chip">Agile / Scrum</span><span class="chip">Jira</span><span class="chip">Scope, schedule and budget</span><span class="chip">RAID management</span><span class="chip">Stakeholder governance</span><span class="chip">Vendor and dependency management</span><span class="chip">SIT, UAT and release readiness</span><span class="chip">Client workshops and demos</span></div></div>
+      <div class="card"><h3>Technology and transformation</h3><div class="chips"><span class="chip">Gen AI and LLM-enabled workflows</span><span class="chip">Adobe Commerce / Magento 2</span><span class="chip">AEM</span><span class="chip">Python</span><span class="chip">PHP · MySQL</span><span class="chip">REST APIs · GraphQL</span><span class="chip">React · Knockout.js</span><span class="chip">Payment, ERP and SSO integrations</span><span class="chip">Git</span></div></div>
+      <div class="card"><h3>Certifications and professional learning</h3><ul class="creds"><li>Project Management Professional (PMP)®</li><li>Adobe Commerce Certified Professional</li><li>Magento 1.x Certified Developer</li><li>Neutrinos (LCP) Certified Professional</li><li>PMI – Introduction to Cognitive Project Management in AI (CPMAI), Certificate of Completion</li></ul></div>
+      <div class="card"><h3>Education and languages</h3><ul class="creds"><li>Master of Computer Applications</li><li>Bachelor of Computer Applications</li><li>English, Hindi, French, Urdu</li></ul></div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-bottom:20px">
+    <div class="contact">
+      <div>
+        <h2>Let’s deliver something meaningful.</h2>
+        <p>Open to Technical Project Manager, Program Manager and Delivery Lead opportunities. Let’s connect to discuss how I can help move your technology initiatives forward.</p>
+      </div>
+      <div class="mail">
+        <code id="em">sinha.pallavi1@gmail.com</code>
+        <button class="btn ghost" id="cp" type="button">Copy email</button>
+        <a class="btn" href="https://www.linkedin.com/in/pallavi-s-20641259/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+  <footer>© Pallavi Sinha · Bengaluru, India</footer>
+</div>
+<script>
+document.getElementById("cp").addEventListener("click", async function () {
+  const email = document.getElementById("em").textContent.trim();
+  const button = this;
+  try {
+    await navigator.clipboard.writeText(email);
+    button.textContent = "Copied";
+    button.setAttribute("aria-label", "Email address copied");
+    window.setTimeout(() => {
+      button.textContent = "Copy email";
+      button.removeAttribute("aria-label");
+    }, 1600);
+  } catch (error) {
+    window.location.href = "mailto:" + email;
+  }
+});
+</script>
+
+</body>
+</html>
