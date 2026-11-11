@@ -29,10 +29,4 @@ across geographies and time zones.
     certifications, education, and languages.
 -   **Contact:** Professional contact details and LinkedIn profile.
 
-## Notes
-
-This is a static portfolio website. It does not require a backend or
-database to run. GitHub Pages provides static hosting for the published
-site.
-
 © Pallavi Sinha
